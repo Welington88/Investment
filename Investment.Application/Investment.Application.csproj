@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="UseCases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UseCases\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Investment.Infrastructure\Investment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Investment.Domain\Investment.Domain.csproj" />
+  </ItemGroup>
+</Project>
