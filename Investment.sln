@@ -3,15 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.11
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.API", "Investment.API\Investment.API.csproj", "{F16E3A26-9B5C-4A18-A314-0FFF36F90145}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.API", "src\Investment.API\Investment.API.csproj", "{F16E3A26-9B5C-4A18-A314-0FFF36F90145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Domain", "Investment.Domain\Investment.Domain.csproj", "{7433FF48-91B6-476C-99E9-104E8F593AFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Domain", "src\Investment.Domain\Investment.Domain.csproj", "{7433FF48-91B6-476C-99E9-104E8F593AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Application", "Investment.Application\Investment.Application.csproj", "{7E374F9A-152E-4165-8495-F7B52A694F24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Application", "src\Investment.Application\Investment.Application.csproj", "{7E374F9A-152E-4165-8495-F7B52A694F24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Infrastructure", "Investment.Infrastructure\Investment.Infrastructure.csproj", "{730C320D-5BFA-413E-A28F-C7E3A09814FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Infrastructure", "src\Investment.Infrastructure\Investment.Infrastructure.csproj", "{730C320D-5BFA-413E-A28F-C7E3A09814FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Tests", "Investment.Tests\Investment.Tests.csproj", "{BC11C702-EFB7-4212-BE47-1E83AA308771}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.Tests", "tests\Investment.Tests\Investment.Tests.csproj", "{BC11C702-EFB7-4212-BE47-1E83AA308771}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - View", "5 - View", "{37EEAC01-2B7A-4C73-8653-38E7CEDFF7C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{AA4A3555-D367-4266-8783-DF241C50ECB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{C0513D28-221E-46E7-A567-51AE3540508E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{A752B39E-5699-46D5-BD3A-F6DB2EDD6C49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{273AF2E2-5CE6-458B-A496-5ECE8F4EAEFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Tests", "6 - Tests", "{72F4EBC4-6953-411D-A2A0-4D97B296B57F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Investment.View", "src/Investment.View\Investment.View.csproj", "{0BB84B21-41AD-4256-8C2C-AF736502EBF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,11 +53,23 @@ Global
 		{BC11C702-EFB7-4212-BE47-1E83AA308771}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC11C702-EFB7-4212-BE47-1E83AA308771}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC11C702-EFB7-4212-BE47-1E83AA308771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB84B21-41AD-4256-8C2C-AF736502EBF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB84B21-41AD-4256-8C2C-AF736502EBF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB84B21-41AD-4256-8C2C-AF736502EBF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB84B21-41AD-4256-8C2C-AF736502EBF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D494349F-D87E-47E0-A5D7-5582F6D033DA}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F16E3A26-9B5C-4A18-A314-0FFF36F90145} = {AA4A3555-D367-4266-8783-DF241C50ECB4}
+		{7E374F9A-152E-4165-8495-F7B52A694F24} = {C0513D28-221E-46E7-A567-51AE3540508E}
+		{7433FF48-91B6-476C-99E9-104E8F593AFA} = {A752B39E-5699-46D5-BD3A-F6DB2EDD6C49}
+		{730C320D-5BFA-413E-A28F-C7E3A09814FD} = {273AF2E2-5CE6-458B-A496-5ECE8F4EAEFC}
+		{BC11C702-EFB7-4212-BE47-1E83AA308771} = {72F4EBC4-6953-411D-A2A0-4D97B296B57F}
+		{0BB84B21-41AD-4256-8C2C-AF736502EBF7} = {37EEAC01-2B7A-4C73-8653-38E7CEDFF7C0}
 	EndGlobalSection
 EndGlobal
