@@ -1,0 +1,56 @@
+<h1>Investimento</h1><br/>
+<hr/>
+<section>
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-10">
+            <h2>{{formLabel}}</h2><br/>
+            <form (ngSubmit)="submit()" #formDir="ngForm" [formGroup]= "form">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Valor Inicial: </label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="number" formControlName= "initialValue" required>
+                            <div *ngIf="initialValue.invalid && formDir.submitted" class="validation-error">
+                                <p *ngIf="initialValue.errors?.['required']">o Valor Inicial é obrigatório e tem ser maior que zero. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-12 col-sm-1">Meses a serem simulados: </label>
+                        <div class="col-xs-12 col-sm-6">
+                            <input class="form-control" type="number" formControlName= "periodInMonths" required>
+                            <div *ngIf="periodInMonths.invalid && formDir.submitted" class="validation-error">
+                                <p *ngIf="periodInMonths.errors?.['required']">o Meses é obrigatório e tem ser maior que zero. </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer col-xs-12 col-sm-3">
+                        <button type="submit" class="btn btn-primary" (onSubmit)="send($event)">Salvar</button>&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> 
+</section>
+<hr/>
+<table class='table table-striped table-bordered table-condensed table-hover' *ngIf="investments.length">
+    <thead class="thead-dark">
+        <tr class="table-light">
+            <td scope="col">Valor Inicial</td>
+            <td scope="col">Meses Investidos</td>
+            <td scope="col">Valor Final</td>
+            <td scope="col">Valor Líquido</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let investment of investments;'>
+            <td class="align-middle" scope="row"> {{investment.initialValue}}</td>
+            <td class="align-middle" scope="row"> {{investment.periodInMonths}}</td>
+            <td class="align-middle" scope="row"> {{investment.finalValue}}</td>
+            <td class="align-middle" scope="row"> {{investment.netValue}}</td>
+        </tr>
+    </tbody>
+</table>
+<br/>       
