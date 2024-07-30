@@ -7,7 +7,7 @@
             <form (ngSubmit)="submit()" #formDir="ngForm" [formGroup]= "form">
                 <div class="form-horizontal">
                     <div class="form-group">
-                        <label class="control-label col-xs-12 col-sm-1">Valor Inicial: </label>
+                        <label class="control-label col-xs-12 col-sm-1" for="initialValue">Valor Inicial: </label>
                         <div class="col-xs-12 col-sm-6">
                             <input class="form-control" type="number" formControlName= "initialValue" required>
                             <div *ngIf="initialValue.invalid && formDir.submitted" class="validation-error">
@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-xs-12 col-sm-1">Meses a serem simulados: </label>
+                        <label class="control-label col-xs-12 col-sm-1" for="periodInMonths">Meses a serem simulados: </label>
                         <div class="col-xs-12 col-sm-6">
                             <input class="form-control" type="number" formControlName= "periodInMonths" required>
                             <div *ngIf="periodInMonths.invalid && formDir.submitted" class="validation-error">
@@ -38,18 +38,18 @@
 <table class='table table-striped table-bordered table-condensed table-hover' *ngIf="investments.length">
     <thead class="thead-dark">
         <tr class="table-light">
-            <td scope="col">Valor Inicial</td>
-            <td scope="col">Meses Investidos</td>
-            <td scope="col">Valor Final</td>
-            <td scope="col">Valor Líquido</td>
+            <th scope="col">Valor Inicial</th>
+            <th scope="col">Meses Investidos</th>
+            <th scope="col">Valor Final</th>
+            <th scope="col">Valor Líquido</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor = 'let investment of investments;'>
-            <td class="align-middle" scope="row"> {{investment.initialValue}}</td>
-            <td class="align-middle" scope="row"> {{investment.periodInMonths}}</td>
-            <td class="align-middle" scope="row"> {{investment.finalValue}}</td>
-            <td class="align-middle" scope="row"> {{investment.netValue}}</td>
+            <td class="align-middle"> {{investment.initialValue}}</td>
+            <td class="align-middle"> {{investment.periodInMonths}}</td>
+            <td class="align-middle"> {{investment.finalValue}}</td>
+            <td class="align-middle"> {{investment.netValue}}</td>
         </tr>
     </tbody>
 </table>

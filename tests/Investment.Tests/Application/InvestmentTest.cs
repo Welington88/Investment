@@ -55,7 +55,7 @@ public class InvestmentTest
         Action action = () => _calculateInvestmentUseCase.CalculateInvestment(investmentResquest);
          
         action.Should().Throw<ArgumentException>()
-        .WithMessage("Valor Inicial tem ser maior que zero (Parameter 'InitialValue')");
+        .WithMessage("Valor Inicial tem ser maior que zero");
     }
 
     [Fact(DisplayName = nameof(CalculeteInvestmentMonthLessEqualZero))]
@@ -73,7 +73,7 @@ public class InvestmentTest
         Action action = () => _calculateInvestmentUseCase.CalculateInvestment(investmentResquest);
          
         action.Should().Throw<ArgumentException>()
-        .WithMessage("Valor Meses tem ser maior que zero (Parameter 'PeriodInMonths')");
+        .WithMessage("Valor Meses tem ser maior que zero");
     }
 
     [Theory(DisplayName = nameof(CalculeteInvestmentRepositoryCDITest))]

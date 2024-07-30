@@ -64,6 +64,9 @@ export class InvestmentComponent implements OnInit {
             this.setValueInvestment(resp);
             this.form.get("initialValue")?.setValue('0');
             this.form.get("periodInMonths")?.setValue('0');
+        },
+        error => {
+          alert(error.error);
         }
       );
       this.cancel();

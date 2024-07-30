@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Investment.API.Controllers;
-using Investment.Application.UseCases;
 using Investment.Domain.Dtos;
 using Investment.Domain.Interfaces;
 using Investment.Tests.Fixtures;

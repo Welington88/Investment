@@ -1,5 +1,6 @@
 ﻿using Investment.Domain.Dtos;
 using Investment.Domain.Entities;
+using Investment.Domain.Exceptions;
 using Investment.Domain.Interfaces;
 
 namespace Investment.Application.UseCases;
@@ -15,10 +16,10 @@ public class CalculateInvestmentUseCase : ICalculateInvestmentUseCase
     public InvestmentResponse CalculateInvestment(InvestmentRequest investmentRequest)
     {   
         if (investmentRequest.InitialValue <= 0)
-            throw new ArgumentException("Valor Inicial tem ser maior que zero", nameof(investmentRequest.InitialValue));
+            throw new InvalidValueException("Valor Inicial tem ser maior que zero");
         
         if (investmentRequest.PeriodInMonths <= 0)
-            throw new ArgumentException("Valor Meses tem ser maior que zero", nameof(investmentRequest.PeriodInMonths));
+            throw new InvalidValueException("Valor Meses tem ser maior que zero");
 
         var investmentValue = new InvestmentValue() {
             InitialValue = investmentRequest.InitialValue,
