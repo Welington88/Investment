@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "Investment.View"
+  "defaultProject": "Investment.View",
+  "cli": {
+    "analytics": "7c0fca10-ca2f-4672-88fc-b2c5069c46ad"
+  }
 }

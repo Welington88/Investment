@@ -29,11 +29,15 @@
     <None Remove="Common\" />
     <None Remove="Fixtures\" />
     <None Remove="Application\" />
+    <None Remove="Domain\" />
+    <None Remove="API\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Fixtures\" />
     <Folder Include="Application\" />
+    <Folder Include="Domain\" />
+    <Folder Include="API\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Investment.Infrastructure\Investment.Infrastructure.csproj" />

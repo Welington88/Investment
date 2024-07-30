@@ -48,9 +48,7 @@ export class InvestmentComponent implements OnInit {
       this.investments.forEach(i => {
         i.initialValue = parseFloat(investment.finalValue.toFixed(2));
         i.netValue = parseFloat(i.netValue.toFixed(2));
-      });
-          
-      
+      });   
   }
 
   submit() {
